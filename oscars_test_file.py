@@ -5,8 +5,8 @@ import requests
 session = requests.Session()
 
 # Create the payload
-payload = {'_username': '[oscarkav@gmail.com]',
-           '_password': '[OSC741@ooooo]'}
+payload = {'_username': '[osca@gmail.com]',
+           '_password': '[@5o]'}
 
 # Post the payload to the site to log in
 s = session.post("https://vms.workforcelogiq.com/login/login?TabId=4", data=payload)
