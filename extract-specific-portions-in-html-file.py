@@ -7,13 +7,17 @@ from os import listdir
 from os.path import isfile, join
 mypath = 'C:\\Users\\malin\\OneDrive\\Dokument\\Python\\webscraping\\week45'
 # download the html files using add-on to chrome (DownThemAll) and put them on a path as above
-onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
 
-print(onlyfiles)
-print(len(onlyfiles))
-for n in range(len(onlyfiles)):
-    print(n)
-    f = codecs.open(mypath+"\\"+onlyfiles[n], encoding='utf-8')
+files = [f for f in listdir(mypath) if isfile(join(mypath, f))]
+
+print("List of files are: ")
+print(files)
+print("Number of files to be scraped: ")
+print(len(files))
+for n in range(len(files)):
+    print (n)
+    print("Scraping file " + files[n] + "...")
+    f = codecs.open(mypath+"\\"+files[n], encoding='utf-8')
     s = f.read()
     #soup = BeautifulSoup(f,"lxml")
 
@@ -54,5 +58,5 @@ for n in range(len(onlyfiles)):
     f = open("myfile_w45.html", "a")
     sleep(1)
     f.write("\n"+str(requirements_all)+"\n")
-    sleep(2)
+    sleep(3)
     f.close()
