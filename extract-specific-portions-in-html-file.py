@@ -53,7 +53,7 @@ for n in range(len(files)):
 #    print(description2)
 #    print("-----------------------------------")
 #    #print(description_all)
-    requirements_all = detail_all_html.find_all("li", {"class": "span11 no-margin"})
+    requirements_all = detail_all_html.find_all("li", {"class": "span11 no-margin"}, encoding='utf-8')
 #    print(requirements_all)
     f = open("myfile_w45.html", "a")
     sleep(1)
